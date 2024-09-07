@@ -1,0 +1,268 @@
+/* blau   #27355C
+hellblau #F7F7F7
+hintergrund #FEFAEF
+rot #FF4D0E button
+grün #B7F799 richtig #4EBE1A
+rot #FFA3A4  falsch #F81816
+blau button share #183CE8 */
+
+body {
+    background-color: #FEFAEF !important;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: #FEFAEF !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.row {
+    height: 100% !important;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.quiz-card {
+    width: 80%;
+    max-width: 800px;
+    height: 450px !important;
+    border: 1px solid rgba(128, 128, 128, 0.514) !important;
+    box-shadow: 13px 15px 39px -8px rgba(0,0,0,0.75);
+    border-radius: 10px !important;
+}
+
+.left-card {
+    width: 25% !important; 
+    background-color: #27355C;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+    border-radius: 9px 0 0 9px;
+}
+
+.right-card {
+    width: 75% !important;
+    background-color: #F7F7F7;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    border-radius: 0 9px 9px 0;
+}
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    gap: 20px;
+}
+
+.img-fluid {
+    height: 70px !important;
+}
+
+.dnone {
+    display: none;
+}
+
+/*  WELCOMEPAGE */
+
+.welcome-header {
+    font-weight: 700;
+    position: relative;
+}
+
+.card-body {
+    height: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative;
+}
+
+.welcome-page {
+    background-image: url(assets/img/brainbg.jpg);
+    width: 80%;
+    background-size: cover;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+
+}
+
+.btn-danger {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.arrow-start {
+    height: 20px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+/*  QUESTION-CARD */
+
+.quiz-page {
+    width: 75%;
+    font-family: 'Rubik';
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: 600;
+}
+
+.card {
+    height: 50px !important;
+    border-radius: 0 !important;
+    position: relative;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.card-body-single-outer {
+    display: flex;  
+    align-items: center;  
+    justify-content: center; 
+    height: 50px; 
+    text-align: center; 
+}
+
+.card-body-single-inner {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    bottom: 5px;
+    height: 36px;
+    width: 36px;
+    background-color: gray;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.answer {
+    text-align: center !important;
+    margin-bottom: 0;
+}
+
+.arrow {
+    height: 24px;
+    width: 24px;
+    background-color: gray;
+    padding: 3px;
+    border-radius: 12px;
+}
+
+span {
+    font-size: 16px;
+}
+
+.quiz-answer-card:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.03);
+}
+
+.bg-danger-inner {
+    color: white;
+    background-color: red;
+}
+
+.bg-success-inner {
+    color: white;
+    background-color: green;
+}
+
+button {
+    border: none !important;
+    background-color: #F7F7F7;
+}
+
+/* END-SCREEN */
+
+.end-screen {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    gap: 8px;
+}
+
+.end-screen p {
+    margin-bottom: 0 !important;
+}
+
+.image-brain-result {
+    width: 100px;
+    margin: 16px auto;
+}
+
+.end-screen > div {
+    
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.complete-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.score {
+    display: flex;
+    gap: 24px;
+}
+
+.text-color-orange {
+    color: orange;
+}
+
+button.btn.btn-primary {
+    --bs-btn-color: #0d6efd;
+    --bs-btn-bg: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image-tropy {
+    width: 60px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);   
+}
+
+
+
