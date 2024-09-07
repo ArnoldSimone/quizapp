@@ -11,13 +11,13 @@ function init() {
 function showQuestion() {
   document.getElementById('welcome-page').style = 'display: none';
   document.getElementById('quiz-page').style='';
-  if (currentQuestion >= questions.length) {
+  if (currentQuestion >= questions.length) {  // Show End Screen
     document.getElementById('end-screen').style='';
     document.getElementById('quiz-page').style = 'display: none';
     document.getElementById('amount-of-questions').innerHTML = questions.length;
     document.getElementById('amount-of-right-question').innerHTML = correktAnswer;
 
-  } else {
+  } else {  // Show Next Question
     let question = questions[currentQuestion]
     document.getElementById('questionText').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
@@ -25,6 +25,11 @@ function showQuestion() {
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
     document.getElementById('number-current-question').innerHTML = currentQuestion + 1;
+    let percent = (currentQuestion+1) / questions.length;
+    percent = Math.round(percent * 100);
+    console.log(percent);
+    document.getElementById('progress-bar').innerHTML = `${percent} %`;
+    document.getElementById('progress-bar').style = `width:${percent}%;`;
   }
 }
 
@@ -32,12 +37,12 @@ function answer(selection) {
 
   let question = questions[currentQuestion];
   let idOfRightAnswer = `answer_${question['right_answer']}`;
-
+  
   if (selection === (`answer_${question['right_answer']}`)) {  
     document.getElementById(selection).parentNode.classList.add('bg-success-subtle');
     document.getElementById(selection).nextElementSibling.classList.add('bg-success-inner'); 
     correktAnswer++;
-  } else {
+  } else { 
     document.getElementById(selection).parentNode.classList.add('bg-danger-subtle');
     document.getElementById(selection).nextElementSibling.classList.add('bg-danger-inner');
     document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success-subtle');
@@ -63,7 +68,7 @@ function resetAnswerButtons() {
   }
 }
 
-function showQuestionAgain() {
+function restartGame() {
   document.getElementById('welcome-page').style ='display: none';
   document.getElementById('quiz-page').style = '';
   document.getElementById('end-screen').style = 'display: none';
