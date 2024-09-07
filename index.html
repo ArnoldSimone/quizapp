@@ -20,7 +20,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body onload="init()">
+<body>
   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <span class="navbar-brand mb-0 h1">QuizApp</span>
@@ -55,7 +55,7 @@
               </button>
             </div>
 
-            <div id="quiz-page" class="quiz-page dnone" style="">
+            <div id="quiz-page" class="quiz-page dnone" style="display: none">
               <h5 class="card-title" id="questionText">Frage</h5>
               <div class="card quiz-answer-card" onclick="answer('answer_1')">
                 <div class="card-body-single-outer">
@@ -100,7 +100,7 @@
 
             </div>
 
-            <div id="end-screen" class="end-screen" style="">
+            <div id="end-screen" class="end-screen" style="display: none">
               <img class="image-brain-result" src="./assets/img/brain result.png" alt="image-brain-result">
               <div class="complete-text">
                 <p>COMPLETE</p>
